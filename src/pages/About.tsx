@@ -61,7 +61,7 @@ const AboutPage = () => {
             {/* Team */}
             <div className="mb-20">
               <h2 className="text-3xl font-bold mb-8 text-center">Our Leadership Team</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   {
                     name: "Alex Johnson",
@@ -74,12 +74,6 @@ const AboutPage = () => {
                     role: "CTO",
                     image: "https://i.pravatar.cc/300?img=5",
                     bio: "Tech veteran specialized in marketplace platforms"
-                  },
-                  {
-                    name: "Michael Rodriguez",
-                    role: "COO",
-                    image: "https://i.pravatar.cc/300?img=3",
-                    bio: "Experienced in supply chain management and operations"
                   },
                   {
                     name: "Lisa Williams",
@@ -121,6 +115,11 @@ const AboutPage = () => {
                   <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg">
                     Sign Up as Company
                   </Button>
+                </Link>
+              </div>
+              <div className="mt-8">
+                <Link to="/pricing" className="text-primary font-medium hover:underline">
+                  View our pricing options →
                 </Link>
               </div>
             </div>
