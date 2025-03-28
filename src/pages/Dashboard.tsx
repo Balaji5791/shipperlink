@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -94,30 +95,30 @@ const Dashboard = () => {
             
             <div className="flex-1 py-6 px-4 overflow-y-auto">
               <nav className="space-y-1">
-                <a 
-                  href="#" 
+                <Link 
+                  to="/dashboard"
                   className="flex items-center gap-3 px-3 py-2 text-gray-800 bg-gray-100 rounded-md"
                 >
                   <Package className="h-5 w-5" />
                   <span>Dashboard</span>
-                </a>
+                </Link>
                 
                 {userRole === "driver" ? (
                   <>
-                    <a 
-                      href="#" 
+                    <Link 
+                      to="/available-orders"
                       className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                     >
                       <Package className="h-5 w-5" />
                       <span>Available Orders</span>
-                    </a>
-                    <a 
-                      href="#" 
+                    </Link>
+                    <Link 
+                      to="/my-deliveries"
                       className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                     >
                       <Truck className="h-5 w-5" />
                       <span>My Deliveries</span>
-                    </a>
+                    </Link>
                   </>
                 ) : (
                   <>
@@ -138,45 +139,45 @@ const Dashboard = () => {
                   </>
                 )}
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/schedule"
                   className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                 >
                   <Calendar className="h-5 w-5" />
                   <span>Schedule</span>
-                </a>
+                </Link>
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/payments"
                   className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                 >
                   <DollarSign className="h-5 w-5" />
                   <span>Payments</span>
-                </a>
+                </Link>
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/reviews"
                   className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                 >
                   <Star className="h-5 w-5" />
                   <span>Reviews</span>
-                </a>
+                </Link>
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/profile"
                   className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                 >
                   <User className="h-5 w-5" />
                   <span>Profile</span>
-                </a>
+                </Link>
                 
-                <a 
-                  href="#" 
+                <Link 
+                  to="/settings"
                   className="flex items-center gap-3 px-3 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
                 >
                   <Settings className="h-5 w-5" />
                   <span>Settings</span>
-                </a>
+                </Link>
               </nav>
             </div>
             
