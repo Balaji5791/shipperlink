@@ -14,7 +14,7 @@ const HeroSection = () => {
               <span className="text-primary">Earn 50%</span> More
             </h1>
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              ShipperLink connects drivers with empty trucks to companies needing shipping. 
+              Miles Worth connects drivers with empty trucks to companies needing shipping. 
               Reduce empty miles, increase profits, and lower transportation costs.
             </p>
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
             <div className="relative z-10 rounded-lg overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1586366775916-7018ef19ff34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Truck driver using ShipperLink app" 
+                alt="Truck driver using Miles Worth app" 
                 className="w-full h-auto"
               />
             </div>

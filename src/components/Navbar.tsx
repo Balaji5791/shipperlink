@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2 font-bold text-xl">
             <Truck className="h-6 w-6 text-primary" />
-            <span>ShipperLink</span>
+            <span>Miles Worth</span>
           </Link>
         </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
               <div className="flex items-center justify-between mb-6">
                 <Link to="/" className="flex items-center gap-2 font-bold text-xl" onClick={() => setIsOpen(false)}>
                   <Truck className="h-6 w-6 text-primary" />
-                  <span>ShipperLink</span>
+                  <span>Miles Worth</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
                   <X className="h-6 w-6" />

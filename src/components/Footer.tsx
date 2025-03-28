@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 font-bold text-xl mb-4">
               <Truck className="h-6 w-6 text-primary-400" />
-              <span className="text-white">ShipperLink</span>
+              <span className="text-white">Miles Worth</span>
             </Link>
             <p className="text-gray-400 mb-6">
               Connecting drivers with empty trucks to companies needing shipping - 
@@ -87,7 +87,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={20} className="text-gray-400 flex-shrink-0" />
-                <a href="mailto:info@shipperlink.com" className="text-gray-400 hover:text-white transition-colors">info@shipperlink.com</a>
+                <a href="mailto:info@milesworth.com" className="text-gray-400 hover:text-white transition-colors">info@milesworth.com</a>
               </li>
             </ul>
           </div>
@@ -95,7 +95,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {new Date().getFullYear()} ShipperLink. All rights reserved.
+            © {new Date().getFullYear()} Miles Worth. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">

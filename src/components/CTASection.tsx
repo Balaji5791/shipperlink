@@ -12,7 +12,7 @@ const CTASection = () => {
             Ready to Transform Your Logistics?
           </h2>
           <p className="text-xl opacity-90 mb-10">
-            Join ShipperLink today and start saving on shipping costs or earning more on your empty return trips.
+            Join Miles Worth today and start saving on shipping costs or earning more on your empty return trips.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
