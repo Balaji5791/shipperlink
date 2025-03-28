@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Card,
@@ -27,6 +26,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
 
 interface Transaction {
   id: string;
