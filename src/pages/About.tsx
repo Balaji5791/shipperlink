@@ -58,46 +58,6 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Team */}
-            <div className="mb-20">
-              <h2 className="text-3xl font-bold mb-8 text-center">Our Leadership Team</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "Alex Johnson",
-                    role: "CEO & Co-Founder",
-                    image: "https://i.pravatar.cc/300?img=1",
-                    bio: "Former logistics executive with 15+ years experience"
-                  },
-                  {
-                    name: "Sarah Chen",
-                    role: "CTO",
-                    image: "https://i.pravatar.cc/300?img=5",
-                    bio: "Tech veteran specialized in marketplace platforms"
-                  },
-                  {
-                    name: "Lisa Williams",
-                    role: "Head of Driver Relations",
-                    image: "https://i.pravatar.cc/300?img=4",
-                    bio: "Former truck driver turned logistics specialist"
-                  }
-                ].map((member, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-64 object-cover"
-                    />
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-primary font-medium mb-3">{member.role}</p>
-                      <p className="text-gray-600">{member.bio}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* CTA */}
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-6">Join Us in Revolutionizing Logistics</h2>
@@ -115,11 +75,6 @@ const AboutPage = () => {
                   <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8 py-6 text-lg">
                     Sign Up as Company
                   </Button>
-                </Link>
-              </div>
-              <div className="mt-8">
-                <Link to="/pricing" className="text-primary font-medium hover:underline">
-                  View our pricing options →
                 </Link>
               </div>
             </div>

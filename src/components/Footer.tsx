@@ -1,8 +1,11 @@
 
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Truck } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { translate } = useLanguage();
+  
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container py-12 md:py-16">
@@ -33,49 +36,46 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-semibold text-lg mb-4">{translate("Quick Links")}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-400 hover:text-white transition-colors">Home</Link>
+                <Link to="/" className="text-gray-400 hover:text-white transition-colors">{translate("Home")}</Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="text-gray-400 hover:text-white transition-colors">How It Works</Link>
+                <Link to="/how-it-works" className="text-gray-400 hover:text-white transition-colors">{translate("How It Works")}</Link>
               </li>
               <li>
-                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">{translate("About Us")}</Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">{translate("Contact")}</Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">For Users</h3>
+            <h3 className="font-semibold text-lg mb-4">{translate("For Users")}</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/register?type=driver" className="text-gray-400 hover:text-white transition-colors">Register as Driver</Link>
+                <Link to="/register?type=driver" className="text-gray-400 hover:text-white transition-colors">{translate("Register as Driver")}</Link>
               </li>
               <li>
-                <Link to="/register?type=company" className="text-gray-400 hover:text-white transition-colors">Register as Company</Link>
+                <Link to="/register?type=company" className="text-gray-400 hover:text-white transition-colors">{translate("Register as Company")}</Link>
               </li>
               <li>
-                <Link to="/login" className="text-gray-400 hover:text-white transition-colors">Login</Link>
+                <Link to="/login" className="text-gray-400 hover:text-white transition-colors">{translate("Login")}</Link>
               </li>
               <li>
-                <Link to="/faq" className="text-gray-400 hover:text-white transition-colors">FAQs</Link>
+                <Link to="/faq" className="text-gray-400 hover:text-white transition-colors">{translate("FAQs")}</Link>
               </li>
               <li>
-                <Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support</Link>
+                <Link to="/support" className="text-gray-400 hover:text-white transition-colors">{translate("Support")}</Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="font-semibold text-lg mb-4">{translate("Contact Us")}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2">
                 <MapPin size={20} className="text-gray-400 mt-1 flex-shrink-0" />
@@ -99,10 +99,10 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             <Link to="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-sm">
-              Privacy Policy
+              {translate("Privacy Policy")}
             </Link>
             <Link to="/terms-of-service" className="text-gray-400 hover:text-white transition-colors text-sm">
-              Terms of Service
+              {translate("Terms of Service")}
             </Link>
           </div>
         </div>

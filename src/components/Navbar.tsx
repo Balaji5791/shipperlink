@@ -8,9 +8,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, Truck, Building2, X } from "lucide-react";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, setLanguage, translate } = useLanguage();
 
   return (
     <header className="border-b bg-white sticky top-0 z-40">
@@ -25,32 +28,33 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-sm font-medium hover:text-primary">
-            Home
+            {translate("Home")}
           </Link>
           <Link to="/how-it-works" className="text-sm font-medium hover:text-primary">
-            How It Works
-          </Link>
-          <Link to="/pricing" className="text-sm font-medium hover:text-primary">
-            Pricing
+            {translate("How It Works")}
           </Link>
           <Link to="/about" className="text-sm font-medium hover:text-primary">
-            About Us
+            {translate("About Us")}
           </Link>
           <Link to="/contact" className="text-sm font-medium hover:text-primary">
-            Contact
+            {translate("Contact")}
           </Link>
         </nav>
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
+          <LanguageToggle 
+            currentLanguage={language}
+            onChange={setLanguage}
+          />
           <Link to="/login">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-              Log In
+              {translate("Log In")}
             </Button>
           </Link>
           <Link to="/register">
             <Button className="bg-primary text-white hover:bg-primary-600">
-              Sign Up
+              {translate("Sign Up")}
             </Button>
           </Link>
         </div>
@@ -75,30 +79,31 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col gap-4">
                 <Link to="/" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Home
+                  {translate("Home")}
                 </Link>
                 <Link to="/how-it-works" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  How It Works
-                </Link>
-                <Link to="/pricing" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Pricing
+                  {translate("How It Works")}
                 </Link>
                 <Link to="/about" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  About Us
+                  {translate("About Us")}
                 </Link>
                 <Link to="/contact" className="text-lg font-medium" onClick={() => setIsOpen(false)}>
-                  Contact
+                  {translate("Contact")}
                 </Link>
               </div>
               <div className="mt-6 space-y-3">
+                <LanguageToggle 
+                  currentLanguage={language}
+                  onChange={setLanguage}
+                />
                 <Link to="/login" onClick={() => setIsOpen(false)}>
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
-                    Log In
+                    {translate("Log In")}
                   </Button>
                 </Link>
                 <Link to="/register" onClick={() => setIsOpen(false)}>
                   <Button className="w-full bg-primary text-white hover:bg-primary-600">
-                    Sign Up
+                    {translate("Sign Up")}
                   </Button>
                 </Link>
               </div>
@@ -106,13 +111,13 @@ const Navbar = () => {
                 <Link to="/register?type=driver" className="flex-1" onClick={() => setIsOpen(false)}>
                   <Button variant="outline" className="w-full h-auto py-4 flex flex-col gap-2 items-center">
                     <Truck className="h-6 w-6" />
-                    <span>I'm a Driver</span>
+                    <span>{translate("I'm a Driver")}</span>
                   </Button>
                 </Link>
                 <Link to="/register?type=company" className="flex-1" onClick={() => setIsOpen(false)}>
                   <Button variant="outline" className="w-full h-auto py-4 flex flex-col gap-2 items-center">
                     <Building2 className="h-6 w-6" />
-                    <span>I'm a Company</span>
+                    <span>{translate("I'm a Company")}</span>
                   </Button>
                 </Link>
               </div>
