@@ -8,12 +8,11 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu, Truck, Building2, X } from "lucide-react";
-import LanguageToggle from "./LanguageToggle";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { language, setLanguage, translate } = useLanguage();
+  const { translate } = useLanguage();
 
   return (
     <header className="border-b bg-white sticky top-0 z-40">
@@ -43,10 +42,6 @@ const Navbar = () => {
 
         {/* Auth Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          <LanguageToggle 
-            currentLanguage={language}
-            onChange={setLanguage}
-          />
           <Link to="/login">
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
               {translate("Log In")}
@@ -92,10 +87,6 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="mt-6 space-y-3">
-                <LanguageToggle 
-                  currentLanguage={language}
-                  onChange={setLanguage}
-                />
                 <Link to="/login" onClick={() => setIsOpen(false)}>
                   <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
                     {translate("Log In")}
